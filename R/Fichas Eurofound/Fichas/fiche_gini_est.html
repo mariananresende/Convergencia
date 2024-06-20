@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>indica_fi_4.knit</title>
+
+<script src="fiche_gini_est_files/header-attrs-2.27/header-attrs.js"></script>
+<script src="fiche_gini_est_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="fiche_gini_est_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="fiche_gini_est_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="fiche_gini_est_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="fiche_gini_est_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="fiche_gini_est_files/navigation-1.1/tabsets.js"></script>
+<link href="fiche_gini_est_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="fiche_gini_est_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="EUF.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><br> <!-- center -->
+<img src="eurofound.jpg" width=248px height=163px> <!-- /center -->
+<br><br></p>
+<!--
+<style  type="text/css">
+body {
+  font-size: 38px;
+}
+</style
+-->
+<div id="indicator-fiche" class="section level1">
+<h1>Indicator Fiche</h1>
+<p>This fiche shows the investigation of upward convergence of Member
+States in the selected indicator using the methodological framework of
+Eurofound (2018). Where upward convergence is the process in which
+Member States improve their performance in relation to a particular
+outcome or policy objective together with a decrease in disparities
+among them. From a methodological point of view, there is no single
+measure capable of capturing all the relevant aspects of the
+convergence, it is therefore essential to consider more than one measure
+in order to obtain a more comprehensive idea of the convergence
+dynamics.</p>
+<p><br></p>
+<div id="fiche-info" class="section level3">
+<h3>Fiche info</h3>
+<p>Today: 2024-06-20 09:10:04.140448<br />
+R Package: <a href='https://cran.r-project.org/package=convergEU'>
+<strong>convergEU</strong> </a><br />
+Indicator: <em>gini_est</em><br />
+Indicator type: <em>highBest</em><br />
+Measures of convergence: <em>all</em><br />
+Aggregation: <em>custom</em><br />
+Time window: <em>time</em> from <em>2012</em> to <em>2021</em><br />
+Author: <em>Marcus</em></p>
+<p><br><br></p>
+</div>
+<div id="time-series-overview-of-eu-countries" class="section level3">
+<h3>Time series overview of EU countries</h3>
+<p>The graph shows the times series trend of each Member State giving an
+idea of the development of the countries across time.</p>
+<p><br></p>
+<p><img src="eurofound.jpg" width=50px height=40px> <br>
+<img src="fiche_gini_est_files/figure-html/unnamed-chunk-1-1.png" width="576" /></p>
+<p><br><br></p>
+</div>
+<div id="time-series-summary-of-eu-countries" class="section level3">
+<h3>Time series summary of EU countries</h3>
+<p>The graph gives an overview of the development in some basic
+descriptive statistics: unweighted average, median, the minimum and the
+maximum value in each year.</p>
+<p><br> <img src="eurofound.jpg" width=50px height=40px> <br>
+<img src="fiche_gini_est_files/figure-html/unnamed-chunk-2-1.png" width="576" /></p>
+<p><br></p>
+<p><br><br></p>
+</div>
+<div id="boxplots-of-eu-countries-over-time" class="section level3">
+<h3>Boxplots of EU countries over time</h3>
+<p>The graph gives an overall idea of the dispersion and some
+descriptive statistics of the Member States in each year.</p>
+<p><img src="eurofound.jpg" width=50px height=40px> <br>
+<img src="fiche_gini_est_files/figure-html/unnamed-chunk-3-1.png" width="576" /></p>
+<p><br><br> <img src="legend.png"></p>
+<p><br><br></p>
+</div>
+<div id="unweighted-average-by-year-over-selected-countries"
+class="section level3">
+<h3>Unweighted average by year over selected countries</h3>
+<p>The graph presents the unweighted average calculated on the
+aggregation of Member States selected. Below the graph there are initial
+and final year values and the overall change in the period. The overall
+change can be upward or downward depending on the objective direction of
+the indicator and its interpretation.</p>
+<p><br> <img src="eurofound.jpg" width=50px height=40px> <br>
+<img src="fiche_gini_est_files/figure-html/unnamed-chunk-4-1.png" width="576" /></p>
+<ul>
+<li><p>Change in average:</p>
+<ul>
+<li>Year 2012, average: 0.5188148<br />
+</li>
+<li>Year 2021, average: 0.5228889<br />
+</li>
+<li>Difference <span class="math inline">\(\Delta\)</span> between
+years: 0.0040741<br />
+<br></li>
+</ul></li>
+<li><p>Overall result (interpretation): <strong>upward
+change</strong><br />
+<br><br />
+</p></li>
+<li><p>Member states with increment of mean in year 2021 with respect to
+year 2012:</p>
+<ul>
+<li>AL; AP; CE; ES; MA; MS; PB; PE; PI; RJ; RN; RR; SP; TO</li>
+</ul></li>
+<li><p>Member states with decrement of means in year 2021 with respect
+to year 2012:</p>
+<ul>
+<li>AC; AM; BA; DF; GO; MG; MT; PA; PR; RO; RS; SC; SE</li>
+</ul></li>
+</ul>
+<p><br><br></p>
+</div>
+<div id="beta-convergence" class="section level2">
+<h2>Beta convergence</h2>
+<p>Beta convergence is a catching-up process in which poorer performing
+countries grow faster than the best perfoming ones. The red line shows
+the relationship between the growth of an indicator over a certain
+period of time and its initial value. Beta convergence exists if that
+relation is statistically significant and negative. Its coefficient
+gives an indication of the speed of the process.</p>
+<p><br><br> <img src="beta_convergence.png"></p>
+<p><br></p>
+<p><img src="eurofound.jpg" width=50px height=40px> <br>
+<img src="fiche_gini_est_files/figure-html/unnamed-chunk-35-1.png" width="576" /></p>
+<p><br></p>
+<p>Beta summary list:</p>
+<ul>
+<li><p>Indicator type: highBest<br />
+<br></p></li>
+<li><p>Beta Coefficient: -0.0128663<br />
+<br></p></li>
+<li><p>Change in average:</p>
+<ul>
+<li><p>Year 2012, average: 0.5188148<br />
+</p></li>
+<li><p>Year 2021, average: 0.5228889<br />
+</p></li>
+<li><p>Difference <span class="math inline">\(\Delta\)</span> between
+years: 0.0040741<br />
+<br></p></li>
+<li><p>Results for year 2021 with reference year 2012:</p>
+<ul>
+<li>For beta convergence: <strong>convergence</strong></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><br></p>
+<p><br><br></p>
+</div>
+<div id="sigma-convergence" class="section level2">
+<h2>Sigma convergence</h2>
+<p>Sigma convergence is a reduction in disparities between Member States
+over time. It can be investigated with the standard deviation or with
+the coefficient of variation.</p>
+<p><br></p>
+<div id="standard-deviation" class="section level4">
+<h4>Standard Deviation</h4>
+<p>Standard deviation allows for the comparison across time periods and
+is preferable if no comparison across indicators is needed because the
+measure of dispersion will not be affected by changes in its average.
+Sigma convergence exists if the overall change is negative.</p>
+<p><br> <br></p>
+<p><img src="standard_deviation.png"></p>
+<p>For each year, the above summaries are calculated to assess if a
+reduction in heterogeneity took place.</p>
+<p><br><br></p>
+<p><br><br></p>
+<p><img src="eurofound.jpg" width=50px height=40px> <br>
+<img src="fiche_gini_est_files/figure-html/unnamed-chunk-42-1.png" width="576" /></p>
+<p><br></p>
+</div>
+<div id="coefficient-of-variation" class="section level4">
+<h4>Coefficient of variation</h4>
+<p>The coefficient of variation allows for the comparison across time
+periods and since it is a scale invariant measure it allows the
+comparison among different indicators. Sigma convergence exists if the
+overall change is negative.</p>
+<p><br> <br></p>
+<p><img src="coef_of_variation.png"></p>
+<p>For each year, the above summaries are calculated to assess if a
+reduction in heterogeneity took place.</p>
+<p><br><br></p>
+<p><br><br></p>
+<p><img src="eurofound.jpg" width=50px height=40px> <br>
+<img src="fiche_gini_est_files/figure-html/unnamed-chunk-43-1.png" width="576" /></p>
+<p><br></p>
+<p>Sigma summary list:</p>
+<ul>
+<li><p>Indicator type: highBest<br />
+<br></p></li>
+<li><p>Change in average:</p>
+<ul>
+<li>Year 2012, average: 0.5188148<br />
+</li>
+<li>Year 2021, average: 0.5228889<br />
+</li>
+<li>Difference <span class="math inline">\(\Delta\)</span> between
+years: 0.0040741<br />
+<br><br />
+</li>
+</ul></li>
+<li><p>Change in Standard Deviation:</p>
+<ul>
+<li>Year 2012, standard deviation: 0.0389853<br />
+</li>
+<li>Year 2021, standard deviation: 0.0432344<br />
+</li>
+<li>Difference between years: 0.004249<br />
+</li>
+<li>Result: divergence<br />
+<br><br />
+</li>
+</ul></li>
+<li><p>Change in Coefficient of Variation (CV):</p>
+<ul>
+<li>Year 2012, CV: 7.5143021<br />
+</li>
+<li>Year 2021, CV: 8.2683646<br />
+</li>
+<li>Difference between years: 0.7540625<br />
+</li>
+<li>Result: divergence<br />
+<br><br />
+</li>
+</ul></li>
+<li><p>Results for year 2021 with reference year 2012:</p>
+<ul>
+<li>Standard Deviation: <strong>Weak upward Divergence </strong><br />
+</li>
+<li>Coefficient of Variation: <strong>Weak upward Divergence
+</strong></li>
+</ul></li>
+</ul>
+<p><br><br></p>
+</div>
+</div>
+<div id="delta-convergence" class="section level2">
+<h2>Delta convergence</h2>
+<p>Delta convergence is a reduction of a country distance from the best
+performing Member State. There is convergence if there is a decrease in
+the period considered.</p>
+<p><br><br> <img src="delta_convergence.png"> <br></p>
+<p>For each year, the above summaries are calculated to assess if a
+reduction in the amplitude on the took place. <br> <br>
+<img src="eurofound.jpg" width=50px height=40px> <br>
+<img src="fiche_gini_est_files/figure-html/unnamed-chunk-52-1.png" width="576" /></p>
+<p><br></p>
+<p>Delta summary list:</p>
+<ul>
+<li><p>Indicator type: highBest<br />
+<br><br />
+</p></li>
+<li><p>Change in average:</p>
+<ul>
+<li>Year 2012, average: 0.5188148<br />
+</li>
+<li>Year 2021, average: 0.5228889<br />
+</li>
+<li>Difference <span class="math inline">\(\Delta\)</span> between
+years: 0.0040741<br />
+<br></li>
+</ul></li>
+<li><p>Change in delta values:</p>
+<ul>
+<li>Year 2012, delta: 2.219<br />
+</li>
+<li>Year 2021, delta: 1.974<br />
+</li>
+<li>Difference between years: -0.245<br />
+</li>
+<li><strong>Overall: convergence</strong></li>
+</ul></li>
+</ul>
+<p><br><br></p>
+</div>
+<div id="gamma-convergence" class="section level2">
+<h2>Gamma convergence</h2>
+<p>Gamma convergence captures the movements of the Member States in the
+country ranking in different points in time. If countries in the first
+rank fall behind or catch up over time, convergence occurs. Changes in
+outcomes have been calculated with the Kendall Index (KI). The index can
+assume values between 0 and 1, where a low value implies that a high
+number of changes have occurred over time. <br></p>
+<p>Gamma summary list:</p>
+<ul>
+<li><p>Indicator type: highBest<br />
+<br><br />
+</p></li>
+<li><p>Change in average:</p>
+<ul>
+<li>Year 2012, average: 0.5188148<br />
+</li>
+<li>Year 2021, average: 0.5228889<br />
+</li>
+<li>Difference <span class="math inline">\(\Delta\)</span> between
+years: 0.0040741<br />
+<br></li>
+</ul></li>
+<li><p>Gamma value:</p>
+<ul>
+<li>Year 2012: reference time<br />
+</li>
+<li>Year 2021: last time</li>
+<li>KI value: 0.7215409</li>
+</ul></li>
+</ul>
+<p><strong>Note</strong>: this measure should be complementary with the
+analysis of the others measures in order to check if the movements are
+towards an exemplary model.</p>
+<p><br><br></p>
+</div>
+<div id="member-states-dynamics" class="section level2">
+<h2>Member States dynamics</h2>
+<p>The dynamics of Member States show the differences in the situation
+of single Member States which can be hidden under the use of a single
+indicator. Understanding the dynamics is also necessary to better
+identify possible drivers of convergence and divergence as well as
+structural deficiencies or sustainable recoveries.</p>
+<br><br>
+<style>
+.vertical-text {
+    display: inline-block;
+    overflow: hidden;
+    width: 1.3em;
+}
+.vertical-text__inner {
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1.5;
+    transform: translate(0,100%) rotate(-90deg);
+    transform-origin: 0 0;
+}
+/* This element stretches the parent to be square
+   by using the mechanics of vertical margins  */
+.vertical-text__inner:after {
+    content: "";
+    display: block;
+    margin: -1.5em 0 100%;
+}
+
+
+body {
+    font: 11px/1 Arial, sans-serif;
+}
+
+table {
+    margin-top: 1em;
+}
+th,td {
+    border: 1px solid;
+    text-align:center;
+    font-weight: normal;
+    padding: 0.5em;
+}
+head{
+   color: blue;
+}
+</style>
+<p><img src="eurofound.jpg" width=50px height=40px> <br></p>
+<p><img src="memtab.png" width="79" /></p>
+<p><br><br></p>
+<div id="convergence-and-divergence-patterns" class="section level4">
+<h4>Convergence and divergence patterns</h4>
+<p>The table represents convergence patterns of the ‘aggregation’
+countries in the chosen time frame. The values in the table refer to the
+patterns shown in the graphical legend below.</p>
+<style>
+.vertical-text {
+    display: inline-block;
+    overflow: hidden;
+    width: 1.3em;
+}
+.vertical-text__inner {
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1.5;
+    transform: translate(0,100%) rotate(-90deg);
+    transform-origin: 0 0;
+}
+/* This element stretches the parent to be square
+   by using the mechanics of vertical margins  */
+.vertical-text__inner:after {
+    content: "";
+    display: block;
+    margin: -1.5em 0 100%;
+}
+
+
+body {
+    font: 11px/1 Arial, sans-serif;
+}
+
+table {
+    margin-top: 1em;
+}
+th,td {
+    border: 1px solid;
+    text-align:center;
+    font-weight: normal;
+    padding: 0.5em;
+}
+head{
+   color: blue;
+}
+</style>
+<p><img src="eurofound.jpg" width=50px height=40px> <br>
+<img src="fiche_gini_est_files/figure-html/unnamed-chunk-15-1.png" width="576" /></p>
+<p><img src="flextab.png" width="94" /></p>
+<p><br> Legend:</p>
+<ul>
+<li>Indicator type: highBest<br />
+</li>
+<li>solid black lines: Member States<br />
+</li>
+<li>solid blue lines: EU average</li>
+</ul>
+<p><img src="gg_patt_conv_annotated.png" width="60%" /></p>
+<p><br><br></p>
+<p><img src="gg_patt_div_annotated.png" width="60%" /></p>
+<p><br><br></p>
+<p><img src="gg_patt_same_annotated.png" width="60%" /></p>
+<!--**Note:** 21 is none of the previous patterns and requires visual inspection.-->
+<p><br></p>
+<p>Legend:</p>
+<ul>
+<li>Indicator type: highBest<br />
+</li>
+<li>solid black lines: Member States<br />
+</li>
+<li>solid blue lines: EU average</li>
+</ul>
+<p><br><br></p>
+</div>
+<div id="total-decrease-and-increase-in-the-gap-with-the-mean"
+class="section level3">
+<h3>Total decrease and increase in the gap with the mean</h3>
+<p>The graph shows the sum of the yearly deviations from European
+average in each country.</p>
+<p><img src="eurofound.jpg" width=50px height=40px> <br></p>
+<p><img src="fiche_gini_est_files/figure-html/demeaGraph-1.png" width="576" /></p>
+<br><br><br>
+<hr>
+<p><br> Last Thu Jun 20 09:10:16 2024 <br></p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "fiche_gini_est_files/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
